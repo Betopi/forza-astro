@@ -5,10 +5,10 @@ interface Props {
 import HeaderNav from "./HeaderNav.astro";
 const { title } = Astro.props;
 import Footer from "./Footer.astro";
-import Login from "../components/Login.astro"
-import Register from "../components/Register.astro"
-import Card from "../components/OurServies.astro"
-import '@fontsource-variable/onest';
+import Login from "../components/Login.astro";
+import Register from "../components/Register.astro";
+import OurServices from "../components/OurServies.astro";
+import "@fontsource-variable/onest";
 ---
 
 <!doctype html>
@@ -31,10 +31,10 @@ import '@fontsource-variable/onest';
     </div>
     <HeaderNav />
     <slot />
-    <Card/>
+    <OurServices class="mt-8" />
   </body>
   <footer>
-     <Footer />
+    <Footer class="py-8" />
   </footer>
 </html>
 <style is:global>
@@ -42,8 +42,7 @@ import '@fontsource-variable/onest';
     color-scheme: light;
   }
   html {
-    font-family: 'Onest Variable', sans-serif;
+    font-family: "Onest Variable", sans-serif;
     scroll-behavior: smooth;
   }
-
 </style>

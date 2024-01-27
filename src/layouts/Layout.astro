@@ -4,6 +4,11 @@ interface Props {
 }
 import HeaderNav from "./HeaderNav.astro";
 const { title } = Astro.props;
+import Footer from "./Footer.astro";
+import Login from "../components/Login.astro"
+import Register from "../components/Register.astro"
+import Card from "../components/OurServies.astro"
+import '@fontsource-variable/onest';
 ---
 
 <!doctype html>
@@ -20,40 +25,25 @@ const { title } = Astro.props;
   <body class="relartive text-white dark:text-white">
     <div class="absolute top-0 -z-10 h-full w-full bg-white">
       <div
-        class="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px]"
+        class="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(197,158,242,0.5)] opacity-50 blur-[80px]"
       >
       </div>
     </div>
     <HeaderNav />
     <slot />
+    <Card/>
   </body>
+  <footer>
+     <Footer />
+  </footer>
 </html>
 <style is:global>
   :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
+    color-scheme: light;
   }
   html {
-    font-family: system-ui, sans-serif;
-    background: #13151a;
-    background-size: 224px;
+    font-family: 'Onest Variable', sans-serif;
+    scroll-behavior: smooth;
   }
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
-  }
+
 </style>

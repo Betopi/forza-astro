@@ -11,6 +11,7 @@ import OurServices from "../components/OurServies.astro";
 import "@fontsource-variable/onest";
 import WelcomeSection from "@components/WelcomeSection.astro";
 import CardsBlogs from "@components/CardsBlogs.astro";
+import SellCard from "@components/SellCard.astro";
 ---
 
 <!doctype html>
@@ -39,17 +40,21 @@ import CardsBlogs from "@components/CardsBlogs.astro";
     <OurServices class="mt-8" />
     <slot />
     <CardsBlogs />
+    <slot />
+    <SellCard />
+    <body>
+      <footer>
+        <Footer class="py-8" />
+      </footer>
+    </body>
+    <style is:global>
+      :root {
+        color-scheme: light;
+      }
+      html {
+        font-family: "Onest Variable", sans-serif;
+        scroll-behavior: smooth;
+      }
+    </style>
   </body>
-  <footer>
-    <Footer class="py-8" />
-  </footer>
 </html>
-<style is:global>
-  :root {
-    color-scheme: light;
-  }
-  html {
-    font-family: "Onest Variable", sans-serif;
-    scroll-behavior: smooth;
-  }
-</style>

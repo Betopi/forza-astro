@@ -1,0 +1,5 @@
+<div class="flex items-center mb-20">
+      <div class="flex-1 border-b-2"></div>
+      <h1 class="text-4xl px-3 flex font-md text-main-red font-bold">Marcas</h1>
+      <div class="flex-1 border-b-2"></div>
+    </div>

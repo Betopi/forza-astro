@@ -12,6 +12,8 @@ import SellCard from "../components/SellCard.astro";
 import CardsBlogs from "../components/CardsBlogs.astro";
 import OurServies from "../components/OurServies.astro";
 import SectionCar from "@components/SectionCar.astro";
+import CardComentrary from "@components/CardComentrary.astro";
+import Login from "@components/Login.astro";
 ---
 
 <!doctype html>
@@ -28,7 +30,7 @@ import SectionCar from "@components/SectionCar.astro";
   <body class="relartive text-white dark:text-white">
     <div class="absolute top-0 -z-10 h-full w-full bg-white">
       <div
-        class="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[#9fd5ea] opacity-50 blur-[80px]"
+        class="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[#90d2ec] opacity-50 blur-[80px]"
       >
       </div>
     </div>
@@ -49,6 +51,9 @@ import SectionCar from "@components/SectionCar.astro";
       </section>
       <section>
         <SectionCar />
+      </section>
+      <section>
+        <CardComentrary />
       </section>
       <section>
         <CardsBlogs />

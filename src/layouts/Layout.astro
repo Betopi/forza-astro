@@ -5,13 +5,13 @@ interface Props {
 import HeaderNav from "./HeaderNav.astro";
 const { title } = Astro.props;
 import Footer from "./Footer.astro";
-import Login from "../components/Login.astro";
-import Register from "../components/Register.astro";
-import OurServices from "../components/OurServies.astro";
 import "@fontsource-variable/onest";
-import WelcomeSection from "@components/WelcomeSection.astro";
-import CardsBlogs from "@components/CardsBlogs.astro";
-import SellCard from "@components/SellCard.astro";
+import WelcomeSection from "../components/WelcomeSection.astro";
+import OurServices from "../components/OurServies.astro";
+import SellCard from "../components/SellCard.astro";
+import CardsBlogs from "../components/CardsBlogs.astro";
+import OurServies from "../components/OurServies.astro";
+import SectionCar from "@components/SectionCar.astro";
 ---
 
 <!doctype html>
@@ -32,21 +32,32 @@ import SellCard from "@components/SellCard.astro";
       >
       </div>
     </div>
-    <HeaderNav />
-    <slot />
-    <WelcomeSection />
+    <header>
+      <HeaderNav />
+    </header>
+    <main>
+      <section>
+        <WelcomeSection />
+      </section>
+      <section>
+        <article>
+          <SellCard />
+        </article>
+      </section>
+      <section>
+        <OurServies />
+      </section>
+      <section>
+        <SectionCar />
+      </section>
+      <section>
+        <CardsBlogs />
+      </section>
+    </main>
+    <footer>
+      <Footer class="py-8" />
+    </footer>
 
-    <slot />
-    <OurServices class="mt-8" />
-    <slot />
-    <CardsBlogs />
-    <slot />
-    <SellCard />
-    <body>
-      <footer>
-        <Footer class="py-8" />
-      </footer>
-    </body>
     <style is:global>
       :root {
         color-scheme: light;

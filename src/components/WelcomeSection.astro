@@ -1,27 +1,27 @@
 ---
 import FrontArrow from "./icons/FrontArrow.astro";
 import FerrariLogo from "./logos/FerrariLogo.astro";
-import KoenigseggLogo from "./logos/KoenigseggLogo.astro";
 import LamboLogo from "./logos/LamboLogo.astro";
-import PaganiLogo from "./logos/PaganiLogo.astro";
-import LotusLogo from "./logos/LotusLogo.astro";
-import MclarenLogo from "./logos/MclarenLogo.astro";
+import BmwLogo from "./logos/BmwLogo.astro";
+import MercesLogo from "./logos/MercesLogo.astro";
+import LotusLogo from "./logos/LotuLogo.astro";
+import AudiLogo from "./logos/AudiLogo.astro";
 ---
 
-<section class="mb-16">
+<section class="mb-10">
   <div
     class="grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-28"
   >
     <div class="mr-auto place-self-center lg:col-span-7">
       <h1
-        class="max-w-2xl text-sky-500 mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl aos-init"
+        class="max-w-2xl text-main-blue mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl aos-init"
         data-aos="fade-down"
         data-aos-duration="1000"
       >
         Descubre la elegancia en cada detalle.
       </h1>
       <p
-        class="max-w-2xl mb-6 font-light text-sky-700 lg:mb-8 md:text-lg lg:text-xl aos-init"
+        class="max-w-2xl mb-6 font-light text-main-blue lg:mb-8 md:text-lg lg:text-xl aos-init"
         data-aos="fade-right"
         data-aos-duration="1000"
       >
@@ -33,8 +33,13 @@ import MclarenLogo from "./logos/MclarenLogo.astro";
 
       <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
         <a
+<<<<<<< HEAD
           href="#"
           class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center text-white-900 border rounded-full sm:w-auto hover:bg-black-300 bg-black"
+=======
+          href="https://github.com/themesberg/landwind"
+          class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center text-white-900 border rounded-full sm:w-auto hover:bg-black-300 bg-main-blue"
+>>>>>>> 879534dfdd8314044b45d0de5a53564ce455309b
         >
           Ordena ahora!
           <FrontArrow />
@@ -55,47 +60,64 @@ import MclarenLogo from "./logos/MclarenLogo.astro";
 </section>
 <!-- End block -->
 
-<section class="aos-init mb-16" data-aos="fade-up" data-aos-duration="1000">
+<section class="aos-init mb-10" data-aos="fade-up" data-aos-duration="1000">
   <div class="max-w-screen-xl px-4 pb-8 mx-auto lg:pb-16">
     <h1
-      class="text-4xl mb-14 flex justify-center items-center text-center font-md mt-4 text-black"
+      class="text-4xl mb-14 flex justify-center items-center text-center font-md mt-4 text-main-red font-bold"
     >
-      Marcas
+      Se la chupo a Astro perdoname por todo astro god
     </h1>
     <div
       class="grid grid-cols-2 gap-6 text-gray-400 sm:gap-12 sm:grid-cols-3 lg:grid-cols-6"
     >
-      <a href="#" class="flex items-center lg:justify-center hover:text-black">
-        <KoenigseggLogo
-          class="h-16 transform hover:scale-105 transition-transform duration-500 ease-in-out filter grayscale-100 hover:grayscale-0"
-        />
+      <a href="#" class="hola flex items-center lg:justify-center">
+        <AudiLogo class="logosaudi h-16 w-46" fill="currentColor" />
       </a>
-      <a href="#" class="flex items-center lg:justify-center hover:text-black">
-        <FerrariLogo
-          class="h-16 transform hover:scale-105 transition-transform duration-500 ease-in-out filter grayscale-100 hover:grayscale-0"
-        />
+      <a href="#" class="hola flex items-center lg:justify-center">
+        <FerrariLogo class="logosFer h-16" fill="currentColor" />
       </a>
-      <a href="#" class="flex items-center lg:justify-center hover:text-black">
-        <LamboLogo
-          class="h-16 transform hover:scale-105 transition-transform duration-500 ease-in-out filter grayscale-100 hover:grayscale-0"
-        />
+      <a href="#" class="hola flex items-center lg:justify-center">
+        <LamboLogo class="logosLam h-16" fill="currentColor" />
       </a>
 
-      <a href="#" class="flex items-center lg:justify-center hover:text-black">
-        <PaganiLogo
-          class="h-16 transform hover:scale-105 transition-transform duration-500 ease-in-out filter grayscale-100 hover:grayscale-0"
-        />
+      <a href="#" class="hola flex items-center lg:justify-center">
+        <BmwLogo class="logosBen h-16" fill="currentColor" />
       </a>
-      <a href="#" class="flex items-center lg:justify-center hover:text-black">
-        <LotusLogo
-          class="h-16 transform hover:scale-105 transition-transform duration-500 ease-in-out filter grayscale-100 hover:grayscale-0"
-        />
+      <a href="#" class="hola flex items-center lg:justify-center">
+        <MercesLogo class="logosMerce h-16" fill="currentColor" />
       </a>
-      <a href="#" class="flex items-center lg:justify-cente hover:text-black">
-        <MclarenLogo
-          class="h-16 transform hover:scale-105 transition-transform duration-500 ease-in-out filter grayscale-100 hover:grayscale-0"
-        />
+      <a href="#" class="hola flex items-center lg:justify-cente">
+        <LotusLogo class="logoslotu h-16" fill="currentColor" />
       </a>
     </div>
   </div>
 </section>
+
+<style>
+  .hola {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer; /* o el color que tenga tu SVG en estado normal */
+  }
+
+  .hola:hover {
+    transform: scale(1.2);
+  }
+  .logoslotu:hover {
+    fill: black; /* o el color que desees */
+  }
+  .logosMerce:hover {
+    fill: black; /* o el color que desees */
+  }
+  .logosaudi:hover {
+    fill: black;
+  }
+  .logosFer:hover {
+    fill: black;
+  }
+  .logosLam:hover {
+    fill: black;
+  }
+  .logosBen:hover {
+    fill: black;
+  }
+</style>

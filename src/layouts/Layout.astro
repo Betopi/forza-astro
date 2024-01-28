@@ -9,6 +9,8 @@ import Login from "../components/Login.astro";
 import Register from "../components/Register.astro";
 import OurServices from "../components/OurServies.astro";
 import "@fontsource-variable/onest";
+import WelcomeSection from "@components/WelcomeSection.astro";
+import CardsBlogs from "@components/CardsBlogs.astro";
 ---
 
 <!doctype html>
@@ -25,13 +27,18 @@ import "@fontsource-variable/onest";
   <body class="relartive text-white dark:text-white">
     <div class="absolute top-0 -z-10 h-full w-full bg-white">
       <div
-        class="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(197,158,242,0.5)] opacity-50 blur-[80px]"
+        class="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[#9fd5ea] opacity-50 blur-[80px]"
       >
       </div>
     </div>
     <HeaderNav />
     <slot />
+    <WelcomeSection />
+
+    <slot />
     <OurServices class="mt-8" />
+    <slot />
+    <CardsBlogs />
   </body>
   <footer>
     <Footer class="py-8" />

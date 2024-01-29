@@ -6,9 +6,8 @@ import HeaderNav from "./HeaderNav.astro";
 const { title } = Astro.props;
 import Footer from "./Footer.astro";
 import "@fontsource-variable/onest";
+import { CarrouselGallery } from "@components/CarrouselGallery";
 import WelcomeSection from "../components/WelcomeSection.astro";
-import OurServices from "../components/OurServies.astro";
-import SellCard from "../components/SellCard.astro";
 import CardsBlogs from "../components/CardsBlogs.astro";
 import OurServies from "../components/OurServies.astro";
 import SectionCar from "@components/SectionCar.astro";
@@ -47,9 +46,9 @@ import Login from "@components/Login.astro";
         </div>
         <WelcomeSection />
       </section>
-      <section>
-        <article>
-          <SellCard />
+      <section class="bg-gray-100">
+        <article class="mb-24 mt-4">
+          <CarrouselGallery client:visible />
         </article>
       </section>
       <section>

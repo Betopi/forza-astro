@@ -14,14 +14,12 @@ import AudiLogo from "./logos/AudiLogo.astro";
   >
     <div class="mr-auto place-self-center lg:col-span-7">
       <h1
-        class="max-w-2xl text-main-blue mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl"
+        class="fade fade-left max-w-2xl text-main-blue mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl"
       >
         Descubre la elegancia en cada detalle.
       </h1>
       <p
-        class="max-w-2xl mb-6 font-light text-main-blue lg:mb-8 md:text-lg lg:text-xl aos-init"
-        data-aos="fade-right"
-        data-aos-duration="1000"
+        class="fade fade-left max-w-2xl mb-6 font-light text-main-blue lg:mb-8 md:text-lg lg:text-xl aos-init"
       >
         Explora la fusión perfecta entre lujo y excelencia en nuestros autos
         exclusivos. Cada viaje es una experiencia extraordinaria, donde la
@@ -32,7 +30,7 @@ import AudiLogo from "./logos/AudiLogo.astro";
       <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
         <a
           href="https://github.com/themesberg/landwind"
-          class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center text-white-900 border rounded-full sm:w-auto hover:bg-black-300 bg-main-blue"
+          class="fade fade-down inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center text-white-900 border rounded-full sm:w-auto hover:bg-black-300 bg-main-blue"
         >
           Ordena ahora!
           <FrontArrow />
@@ -42,9 +40,7 @@ import AudiLogo from "./logos/AudiLogo.astro";
 
     <div class="hidden lg:mt-[-40px] lg:col-span-5 lg:flex">
       <img
-        class="aos-init"
-        data-aos="fade-left"
-        data-aos-duration="1000"
+        class="fade fade-right"
         src="../../public/img/lam3.png"
         alt="hero image"
       />
@@ -58,7 +54,11 @@ import AudiLogo from "./logos/AudiLogo.astro";
     <div class="flex items-center justify-center mb-20 mx-auto">
       <!-- Modifica esta línea -->
       <div class="w-20 mx-1 border-b-2 border-gray-300"></div>
-      <h1 class="text-4xl px-3 flex font-md text-main-red font-bold">Marcas</h1>
+      <h1
+        class="fade fade-up text-4xl px-3 flex font-md text-main-red font-bold"
+      >
+        Marcas
+      </h1>
       <div class="w-20 mx-1 border-b-2 border-gray-300"></div>
     </div>
 
@@ -115,4 +115,69 @@ import AudiLogo from "./logos/AudiLogo.astro";
   .logosBen:hover {
     fill: black;
   }
+
+  .fade {
+    opacity: 0;
+    transition:
+      opacity 0.5s ease-in-out,
+      transform 0.5s ease-in-out;
+  }
+
+  .fade-left {
+    transform: translateX(-60px); /* Ajusta el valor según tu preferencia */
+  }
+
+  .fade-right {
+    transform: translateX(60px); /* Ajusta el valor según tu preferencia */
+  }
+  .fade-up {
+    transform: translateY(-60px);
+  }
+
+  .fade-down {
+    transform: translateY(60px);
+  }
+
+  .fade.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .flip-left {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
+    transform-origin: left center;
+  }
+
+  .flip-left.active {
+    transform: rotateY(0);
+  }
+
+  .flip-left .card {
+    transform: rotateY(-180deg);
+  }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const fadeElements = document.querySelectorAll(".fade");
+
+    function checkFadeElements() {
+      fadeElements.forEach((fadeElement) => {
+        const top = fadeElement.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (top < windowHeight) {
+          fadeElement.classList.add("active");
+        }
+      });
+    }
+
+    // Verifica al cargar la página
+    checkFadeElements();
+
+    // Verifica al hacer scroll
+    document.addEventListener("scroll", checkFadeElements);
+  });
+</script>

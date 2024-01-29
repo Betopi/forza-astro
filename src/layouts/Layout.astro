@@ -14,6 +14,7 @@ import OurServies from "../components/OurServies.astro";
 import SectionCar from "@components/SectionCar.astro";
 import CardComentrary from "@components/CardComentrary.astro";
 import Login from "@components/Login.astro";
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -25,12 +26,13 @@ import Login from "@components/Login.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
 
   <body class="relartive text-white dark:text-white">
     <div class="absolute top-0 -z-10 h-full w-full bg-white">
       <div
-        class="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[#90d2ec] opacity-50 blur-[80px]"
+        class="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[170%] translate-y-[20%] rounded-full bg-[#9ddfe0] opacity-60 blur-[95px]"
       >
       </div>
     </div>
@@ -39,6 +41,10 @@ import Login from "@components/Login.astro";
     </header>
     <main>
       <section>
+        <div
+          class="absolute bottom-auto left-auto right-0 top-0 h-[300px] w-[300px] -translate-x-[-10%] translate-y-[300%] rounded-full bg-[#E6C1E3] opacity-60 blur-[95px]"
+        >
+        </div>
         <WelcomeSection />
       </section>
       <section>
@@ -47,12 +53,20 @@ import Login from "@components/Login.astro";
         </article>
       </section>
       <section>
+        <div
+          class="absolute bottom-auto left-auto right-0 top-0 h-[400px] w-[400px] -translate-x-[250%] translate-y-[350%] rounded-full bg-gradient-to-br from-cyan-300 to-purple-700 opacity-60 blur-[95px]"
+        >
+        </div>
         <OurServies />
       </section>
       <section>
         <SectionCar />
       </section>
       <section>
+        <div
+          class="absolute bottom-auto left-auto right-0 top-0 h-[200px] w-[200px] -translate-x-[10%] translate-y-[1150%] rounded-full bg-gradient-to-br from-purple-500 to-red-500 opacity-60 blur-[95px]"
+        >
+        </div>
         <CardComentrary />
       </section>
       <section>

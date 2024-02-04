@@ -1,0 +1,146 @@
+<h1 class="carousel-title">Talleres disponibles</h1>
+<div class="carousel-container">
+  <div class="carousel-wrapper" id="carouselWrapper">
+    <!-- Las imágenes de ejemplo -->
+    <div class="carousel-slide">
+      <img src="../../public/img/ch-1.webp" alt="Image 1" />
+    </div>
+    <div class="carousel-slide">
+      <img src="../../public/img/ch-2.webp" alt="Image 2" />
+    </div>
+    <div class="carousel-slide">
+      <img src="../../public/img/ch-3.webp" alt="Image 3" />
+    </div>
+    <div class="carousel-slide">
+      <img src="../../public/img/ch-3.webp" alt="Image 4" />
+    </div>
+  </div>
+  <button class="carousel-button" id="prevButton">&lt;</button>
+  <button class="carousel-button" id="nextButton">&gt;</button>
+</div>
+<a href="/getInscription" class="button-link">Inscribete a un taller aqui!</a>
+
+<style>
+  .carousel-title {
+    text-align: center;
+    font-size: 35px; /* Tamaño del título */
+    color: #333; /* Color del texto */
+  }
+  .carousel-container {
+    position: relative;
+    width: 400px;
+    margin: 50px auto;
+    overflow: hidden;
+    height: 450px;
+    top: -10px;
+    margin-bottom: -10px;
+  }
+
+  .carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .carousel-slide img {
+    width: 100%; /* Ajusta el ancho de la imagen según tus necesidades */
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 15px; /* Aumentar el tamaño de los botones */
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.3s ease; /* Agregar transición para el efecto hover */
+  }
+
+  .carousel-button:hover {
+    background: rgba(0, 128, 0, 0.7); /* Verde oscuro al hacer hover */
+  }
+
+  #prevButton {
+    left: 0;
+  }
+
+  #nextButton {
+    right: 0;
+  }
+
+  .button-link {
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #45a049; /* Cambia el color del borde según tus preferencias */
+    color: #45a049; /* Cambia el color del texto según tus preferencias */
+    border-radius: 5px;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+    margin-left: 540px;
+    font-weight: bold;
+    position: relative;
+  }
+
+  .button-link:hover {
+    background-color: #45a049; /* Cambia el color de fondo al pasar el mouse sobre el botón */
+    color: #fff; /* Cambia el color del texto al pasar el mouse sobre el botón */
+    font-weight: bold;
+  }
+</style>
+
+<script lang="js">
+  document.addEventListener("DOMContentLoaded", function () {
+    const carouselWrapper = document.getElementById("carouselWrapper");
+    const prevButton = document.getElementById("prevButton");
+    const nextButton = document.getElementById("nextButton");
+
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      const newTransformValue = -index * 100 + "%";
+      carouselWrapper.style.transform = "translateX(" + newTransformValue + ")";
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showSlide(currentIndex);
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showSlide(currentIndex);
+    }
+
+    prevButton.addEventListener("click", prevSlide);
+    nextButton.addEventListener("click", nextSlide);
+
+    // Agregar imágenes dinámicamente
+    const images = ["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg"];
+
+    images.forEach(function (image) {
+      const slide = document.createElement("div");
+      slide.className = "carousel-slide";
+
+      const img = document.createElement("img");
+      img.src = image;
+      img.alt = "Image";
+
+      slide.appendChild(img);
+      carouselWrapper.appendChild(slide);
+    });
+  });
+</script>

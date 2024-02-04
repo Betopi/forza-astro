@@ -6,6 +6,7 @@ export default {
       colors: {
         "main-red": "#A2001D",
         "main-blue": "#100E34",
+        "blue-hover": "#8ad9da",
       },
     },
   },

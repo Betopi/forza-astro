@@ -8,7 +8,7 @@
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
       "@assets/*": ["src/assets/*"],
-      "public/*": ["src/public/*"],
+      "@public/*": ["src/public/*"],
     },
   },
 }

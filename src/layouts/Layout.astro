@@ -16,6 +16,7 @@ import { ViewTransitions } from "astro:transitions";
 import { CarrouselGallery } from "@components/CarrouselGallery";
 import BackgroundBubles from "@components/BackgroundBubles.astro";
 import Carrusel from "@components/Carrusel.astro";
+import RegisterPru from "@components/RegisterPru.jsx";
 ---
 
 <!doctype html>
@@ -31,7 +32,13 @@ import Carrusel from "@components/Carrusel.astro";
   </head>
 
   <body class="relartive text-white">
-    <div class="absolute top-0 -z-10 h-full w-full bg-white">
+    <section>
+      <article>
+        <RegisterPru client:visible />
+      </article>
+    </section>
+
+    <!--   <div class="absolute top-0 -z-10 h-full w-full bg-white">
       <div>
         <BackgroundBubles />
       </div>
@@ -64,8 +71,8 @@ import Carrusel from "@components/Carrusel.astro";
       </section>
       <section>
         <CardsBlogs />
-      </section>
-    </main>
+      </section> -->
+
     <footer>
       <Footer />
     </footer>

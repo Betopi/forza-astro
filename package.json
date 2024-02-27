@@ -18,6 +18,7 @@
     "@fontsource-variable/onest": "^5.0.2",
     "@libsql/client": "^0.5.0",
     "@material-tailwind/react": "^2.1.8",
+    "@supabase/supabase-js": "^2.39.7",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
     "astro": "^4.2.6",
